@@ -1,7 +1,7 @@
 create table if not exists Album (
 	album_id SERIAL primary key,
 	album_title VARCHAR(60),
-	year date 
+	year INTEGER 
 );
 
 create table if not exists Track (
@@ -25,7 +25,7 @@ create table if not exists Genre (
 create table if not exists Collection (
 	collection_id SERIAL primary key,
 	collection_title VARCHAR(60) not null,
-	release_year date
+	release_year INTEGER
 );
 
 
