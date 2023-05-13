@@ -31,8 +31,8 @@ create table if not exists Collection (
 
 
 create table if not exists GenreExecutor (
-	genre_id SERIAL references Genre(genre_id),
-	executor_id SERIAL references Executor(executor_id),
+	genre_id INT references Genre(genre_id),
+	executor_id INT references Executor(executor_id),
 	constraint pk primary key (genre_id, executor_id)
 );
 
