@@ -37,13 +37,13 @@ create table if not exists GenreExecutor (
 );
 
 create table if not exists ExecutorAlbum (
-	executor_id SERIAL references Executor(executor_id),
-	album_id SERIAL references Album(album_id),
+	executor_id INT references Executor(executor_id),
+	album_id INT references Album(album_id),
 	constraint pk primary key (executor_id, album_id)
 );
 
 create table if not exists TrackCollection (
-	track_id SERIAL references Track(track_id),
-	collection_id SERIAL references Collection(collection_id),
+	track_id INT references Track(track_id),
+	collection_id INT references Collection(collection_id),
 	constraint pk primary key (track_id, collection_id)
 );
