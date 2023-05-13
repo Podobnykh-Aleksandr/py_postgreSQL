@@ -1,12 +1,13 @@
 create table if not exists Album (
 	album_id SERIAL primary key,
 	album_title VARCHAR(60),
-	year INTEGER 
+	year INTEGER
+	track_entry INT
 );
 
 create table if not exists Track (
 	track_id SERIAL primary key,
-	track_entry BOOL references Album(id), 
+	track_entry INT references Album(track_entry), 
 	track_title VARCHAR(60),
 	duration time
 );
